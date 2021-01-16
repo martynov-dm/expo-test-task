@@ -1,17 +1,14 @@
-import React, { createElement } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { createElement, useState } from 'react'
+import { StyleSheet } from 'react-native'
 
-interface IProps {
-  value: Date
-  onChange: (arg: any) => void
-}
-
-const DatePicker: React.FC<IProps> = (props) => {
-  const { value, onChange } = props
+const DatePicker = () => {
+  const [date, setDate] = useState('2020-07-07')
   return createElement('input', {
     type: 'date',
-    value: value,
-    onInput: onChange,
+    value: date,
+    onChange: (e) => setDate(e.currentTarget.value),
+    format: 'yyyy-mmmm-dd',
+    id: 'datePicker',
   })
 }
 

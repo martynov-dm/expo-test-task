@@ -7,7 +7,10 @@ import {
   Roboto_400Regular,
   Roboto_300Light,
 } from '@expo-google-fonts/roboto'
+
 import Gallery from '../components/Gallery'
+import DatePicker from '../components/DatePicker'
+
 const Main = () => {
   const [fontsLoaded] = useFonts({
     Roboto_500Medium,
@@ -27,6 +30,7 @@ const Main = () => {
             color='#A7A7A7'
           />
           <Text style={styles.header}>SVO - JFK</Text>
+          <DatePicker />
         </View>
         <Gallery />
       </View>
