@@ -46,8 +46,9 @@ const styles = StyleSheet.create({
   },
   appcontainer: {
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
 
     backgroundColor: 'white',
     height: 800,
@@ -57,6 +58,10 @@ const styles = StyleSheet.create({
     boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.15)',
   },
   headerContainer: {
+    marginTop: 65,
+    marginBottom: 24,
+    marginRight: 'auto',
+    marginLeft: 40,
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
